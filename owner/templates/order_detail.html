@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block body_block%}
+    <div class="row mt-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="card" style="width: 18rem;">
+                <img src="{{order.item.image.url}}" alt="">
+              <div class="card-body">
+                <h5 class="card-title">{{order.item.book_name}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{order.item.price}}</h6>
+                  <h6 class="card-subtitle mb-2 text-muted">{{order.address}}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">{{order.user}}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">{{order.user.email}}</h6>
+
+              </div>
+</div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+{%endblock%}

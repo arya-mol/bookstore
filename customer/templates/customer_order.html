@@ -1,0 +1,17 @@
+{%extends 'custbase.html'%}
+{%block body_block%}
+<div class="row mt-5">
+    <div class="col-4"></div>
+    <div class="col-4">
+
+      <form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+          <input type="submit" value="placeorder">
+</form>
+
+    </div>
+    <div class="col-4"></div>
+</div>
+
+{%endblock%}

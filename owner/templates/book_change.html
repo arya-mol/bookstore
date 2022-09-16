@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="row mt-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form action="" method="post" enctype="multipart/form-data">
+                {%csrf_token%}
+                {{form.as_p}}
+                <div class="mb-3">
+                    <input type="submit" value="ChangeBook">
+                </div>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+{%endblock%}

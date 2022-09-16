@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="container">
+    <div class="row mt-5">
+    <div class="col-6">
+        <div class="card">
+  <h5 class="card-header">New Orders: {{n_orders|length}}</h5>
+  <div class="card-body">
+    <table class="table">
+            <tr>
+                <th>ItemName</th>
+                <th>User</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+            {%for order in n_orders%}
+            <tr>
+                <td>{{order.item.book_name}}</td>
+                <td>{{order.user}}</td>
+                <td>{{order.date}}</td>
+                <td>
+                    <a href="{%url 'orderdetail' order.id%}" class="btn btn-dark">View</a>
+                    <a href="{%url 'orderprocess' order.id%}" class="btn btn-primary">Process</a>
+                </td>
+            </tr>
+            {%endfor%}
+        </table>
+  </div>
+</div>
+
+    </div>
+    <div class="col-6"></div>
+</div>
+
+</div>
+
+{%endblock%}
